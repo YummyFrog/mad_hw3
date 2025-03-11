@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async'; // For Timer
+import 'dart:async';
 
 void main() {
   runApp(MyGameApp());
@@ -26,7 +26,7 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   bool _isTimerRunning = false;
   bool _isGameOver = false;
-  int _timerSeconds = 180; // 3 minutes in seconds
+  int _timerSeconds = 180; // timer
   late Timer _timer;
 
   void _startTimer() {
@@ -86,8 +86,8 @@ class _GameScreenState extends State<GameScreen> {
               ElevatedButton(
                 onPressed: _startTimer,
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20), // Bigger button
-                  textStyle: TextStyle(fontSize: 24), // Bigger text
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                  textStyle: TextStyle(fontSize: 24),
                 ),
                 child: Text('Play'),
               ),
